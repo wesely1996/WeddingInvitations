@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="./icons/love_letter.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./icons/love_letter.ico" type="image/x-icon" />
+
+    <meta property="og:url" content="https://vencanje-teodore-i-nikole.com/" />
+    <meta property="og:title" content="Venčanje Teodore i Nikole" />
+    <meta property="og:description" content="Pozivamo vas na naše venčanje." />
+    <meta property="og:image" content="./images/preview.png" />
+
+    <link rel="stylesheet" href="index.css">
+    <title>T&N Venčanje</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-navbar">
+        <div class="container-fluid">
+            
+            <div  class="navbar-brand">
+                <a itemprop="url" href="#home" style="height: 90px;">
+                    <img src="./images/logo/logo_gold.png" alt="T&N" height="80px"/>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex justify-content-end">
+                        <a class="nav-link" href="#detalji-vencanja">DETALJI VENČANJA</a>
+                    </li>
+                </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="background-image">
+        <img id="horizontal-bg" src="./images/background/page_edges_lb.png" alt=""/>
+        <img id="vertical-bg" src="./images/background/bg_mobile_flowers.png" alt=""/>
+    </div>
+
+    <audio src="./music/Valetines-Day.mp3" loop id="bg-music"></audio>
+    <script>
+        document.body.addEventListener('click', function () {
+            var myAudio = document.getElementById('bg-music');
+            if (myAudio.paused) {
+                myAudio.volume = 0.5;
+                myAudio.play();
+            }
+        });
+    </script>
+
+    <div class="d-flex flex-column page-section" id="home">
+        <div class="d-flex justify-content-center align-items-center flex-column text-center home-content" 
+        style="height: 80vh;">
+            <div class="d-flex align-items-center flex-column p-4">
+                <div class="t-and-n-title">Teodora & Nikola</div>
+                <div class="h4 home-subtitle">VENČAVAMO SE</br>14. SEPTEMBRA 2024.</div>
+            </div>
+            <div class="d-flex justify-content-center flex-row">
+                <div class="flex-column countdown-field">
+                    <div class="countdown" id="days-to-wedding">00</div>
+                    <div class="countdown-label">DANA</div>
+                </div>
+                <div class="flex-column countdown-field">
+                    <div class="countdown" id="hours-to-wedding">00</div>
+                    <div class="countdown-label">SATI</div>
+                </div>
+                <div class="flex-column countdown-field">
+                    <div class="countdown" id="minutes-to-wedding">00</div>
+                    <div class="countdown-label">MINUTA</div>
+                </div>
+                <div class="flex-column countdown-field">
+                    <div class="countdown" id="seconds-to-wedding">00</div>
+                    <div class="countdown-label">SEKUNDI</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="d-flex flex-column justify-content-center align-items-center page-section" id="detalji-vencanja" style="min-height: 80vh;">
+        <div class="section-title " id="detalji-vencanja-naslov">Kada & Gde</div>
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <button class="d-flex flex-column justify-content-center align-items-center p-4 btn detail-card" 
+                onclick=" window.open('https://www.google.com/maps/place/Crkva+Sv.+apostola+Vartolomeja+i+Varnave/@44.7421338,20.4424944,15z/data=!4m6!3m5!1s0x475a719078891eb7:0x256d344d263a5bbb!8m2!3d44.7421338!4d20.4424944!16s%2Fg%2F121pw9rj?entry=ttu','_blank')"
+                id="church-button">
+                <img src="./icons/chapel.png" alt="✝️"  height=70 width=70/>
+                <div class="h3 card-subtitle">CRKVENO VENČANJE</div>
+                <div class="card-text">u 14:00</div>
+                <div class="card-text">Subota, 14. septembar 2024.</div>
+                <div class="card-text">Crkva Sv. apostola Vartolomeja i Varnave</div>
+                <div class="card-text">Miška Kranjca 4, Beograd</div>
+            </button>
+            <button class="d-flex flex-column justify-content-center align-items-center p-4 btn detail-card" 
+                onclick=" window.open('https://www.google.com/maps/place/Hotel+centar+%E2%80%9EBala%C5%A1evi%C4%87%E2%80%9D/@44.7449885,20.4475334,15z/data=!4m9!3m8!1s0x475a71af8df98121:0x8513396ab61390a5!5m2!4m1!1i2!8m2!3d44.7449885!4d20.4475334!16s%2Fg%2F1v_0hk5d?entry=ttu','_blank')">
+                <img src="./icons/engagement-ring.png" alt="💍" height=70 width=70/>
+                <div class="h3 card-subtitle">PROSLAVA I GRAĐANSKO VENČANJE</div>
+                <div class="card-text">od 15:00</div>
+                <div class="card-text">Subota, 14. septembar 2024.</div>
+                <div class="card-text">Hotel centar „Balašević”</div>
+                <div class="card-text">Miška Kranjca 17a, Beograd</div>
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="countdown.js"></script>
+    <script src="scrolling.js"></script>
+    <script src="manager.js"></script>
+</body>
+</html>
